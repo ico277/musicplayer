@@ -1,8 +1,9 @@
-CC ?= cc
-CFLAGS ?= -O2
-CXXFLAGS ?= $(CFLAGS)
-
 SRC = $(wildcard ./*.c)
 
+.PHONY: clean
+
 shared_lib:
-	$(CC) 
+	$(CC) -fPIC -shared $(SRC) -o $(BUILD_DIR)/libmusicplayer.so
+
+clean:
+	rm -f $(BUILD_DIR)/libmusicplayer.so

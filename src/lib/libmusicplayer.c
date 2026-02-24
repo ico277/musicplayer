@@ -1,5 +1,9 @@
+#include "./libmusicplayer.h"
+
 #include <stdio.h>
 
-void test() {
+MusicPlayer_t* init_musicplayer(MusicPlayer_t mp) {
     puts("hai");
+
+    return NULL;
 }
